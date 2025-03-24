@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  @apply font-sans; 
+}
+
+@keyframes custom-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+/* Floating Effect for Content Image */
+@keyframes contentFloating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-content {
+  animation: contentFloating 4s ease-in-out infinite;
+}
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Custom duration for animate-ping */
+.animate-ping-custom {
+  animation: ping 1s linear infinite; /* Adjust the duration here */
+}
+
+/* Floating Effect for Alert Image */
+@keyframes alertFloating {
+ 0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-70px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-alert {
+  animation: alertFloating 7s ease-in-out infinite;
+}
+
+/* Floating Effect for Label2 Image */
+@keyframes label2Floating {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-label2 {
+  animation: label2Floating 4s ease-in-out infinite;
+}
+
+/* Floating Effect for Label4 Image */
+@keyframes label4Floating {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-label4 {
+  animation: label4Floating 3s ease-in-out infinite;
+}
+
+/* Initial state of circle frame */
+.circle-frame {
+  opacity: 0;
+  transform: scale(0);
+  
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out, top 0.3s ease-out, right 0.3s ease-out;
+  will-change: opacity, transform, top, right; /* Helps improve performance during animation */
+}
+
+/* On hover, smoothly transition the circle frame */
+.group:hover .circle-frame {
+  opacity: 1;
+  transform: scale(1.1); /* Slightly enlarge the circle */
+}
