@@ -213,44 +213,14 @@ const Contact = () => {
                         <GrLocation className="text-2xl font-bold" />
                       </span>
                       <p className="font-medium text-black">
-                        Location: Dhaka, Bangladesh
+                        Location: Singapore - HQ, USA, Bangladesh
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div
-                className="rounded-3xl md:w-1/2 w-full"
-                style={{
-                  border: "solid 1px transparent",
-                  backgroundImage:
-                    "linear-gradient(#ffffff, #ffffff), radial-gradient(circle at bottom left, #07090d, #ffffff00)",
-                  backgroundColor: "white",
-                  backgroundOrigin: "border-box",
-                  backgroundClip: "content-box, border-box",
-                }}
-              >
-                <div className="p-5">
-                  <div className="flex items-center space-x-6 mb-7">
-                    <FaPhoneAlt className="flex-shrink-0 h-9 w-9 text-[#1C3765]" />
-                    <h3 className="text-black font-semibold text-xl">
-                      Talk to Us
-                    </h3>
-                  </div>
-
-                  <div className="flex flex-col space-y-5">
-                    <div className="flex items-center space-x-3">
-                      <FaBookOpen className="w-6 h-6 text-[#1C3765]" />
-                      <p className="font-medium text-black">info@axiler.com</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <RiContactsBookLine className="w-6 h-6 text-[#1C3765]" />
-                      <p className="font-medium text-black">+8801722633328</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ const highlights = [
 
 export default function Blogs() {
   return (
-    <section className="md:container px-4 py-12">
+    <section className="lg:container px-4 py-12">
       {/* Heading */}
       <h2 className="text-2xl pb-[60px] lg:text-3xl font-hubot font-medium text-gray-900">
         See How Businesses Across Industries Have Strengthened <br />

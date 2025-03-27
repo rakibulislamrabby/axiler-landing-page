@@ -27,9 +27,9 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section className="md:container px-4 py-16 ">
+    <section className="lg:container px-4 py-16 ">
       {/* Section Title */}
-      <h2 className="text-2xl pb-8 lg:text-3xl font-medium font-hubot text-gray-900">
+      <h2 className="text-xl lg:text-start sm:text-2xl md:text-3xl pb-8 sm:pb-12 md:pb-[60px] text-center font-medium font-hubot text-gray-900">
         Meet the skilled and experienced team <br />
         behind innovative products
       </h2>

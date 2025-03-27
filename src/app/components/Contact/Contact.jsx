@@ -115,7 +115,7 @@ const ContactForm = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
-                    Email*
+                    Email
                   </label>
                   <input
                     type="email"
@@ -123,9 +123,12 @@ const ContactForm = () => {
                     {...register("email", {
                       required: "Email is required",
                       pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: "Invalid email address",
+                        value:
+                          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        message: "Invalid email format",
                       },
+                      validate: (value) =>
+                        !value.endsWith("@example.com") || "Use a valid domain",
                     })}
                     className="w-full p-2 mt-1 border border-gray-500 rounded-lg focus:ring"
                   />

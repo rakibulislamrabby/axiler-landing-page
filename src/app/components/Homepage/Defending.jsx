@@ -27,16 +27,17 @@ const attackPoints = [
 
 const AttackMapSection = () => {
   return (
-    <section className="lg:container flex flex-col items-center text-center pt-14 lg:pt-1 pb-16 bg-white">
+    <section className="lg:container flex flex-col items-center text-center pt-6 lg:pt-1 pb-16 bg-white">
       <h2 className="text-3xl md:text-4xl text-[#0F0F0F] font-hubot">
         DEFENDING AGAINST THE{" "}
         <span className="text-transparent bg-clip-text bg-primary font-semibold">
           UNSEEN
         </span>
       </h2>
-      <p className="mt-4 text-gray-600 max-w-2xl font-hubot">
+      <p className="mt-4 px-3 lg:px-0 text-gray-600 max-w-2xl font-hubot">
         Watch as attacks unfold in <span className="font-bold">real-time</span>,
-        increasing visibility <br />
+        increasing visibility
+        <br className="hidden lg:block" />
         beyond business silos and tracking threats across domains.
       </p>
 

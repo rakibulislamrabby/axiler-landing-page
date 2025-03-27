@@ -44,15 +44,15 @@ const Testimonial = () => {
   }, [activeIndex, isHovered]);
 
   return (
-    <div className="lg:container ">
-      <section className="py-8 px-5 mx-auto relative mt-20">
-        <h2 className="text-2xl pb-[60px] lg:text-3xl font-hubot font-medium text-gray-900">
-          See How Businesses Across Industries Have Strengthened <br />
+    <div className="lg:container">
+      <section className="py-8 px-5 lg:px-0 mx-auto relative mt-20">
+        <h2 className="text-xl lg:text-start sm:text-2xl md:text-3xl pb-8 sm:pb-12 md:pb-[60px] text-center font-medium font-hubot text-gray-900">
+          See How Businesses Across Industries Have Strengthened <br className="hidden md:block"/>
           Their Cyber Defenses with Axiler’s Cutting-Edge Security
         </h2>
-        <div className="absolute inset-x-0 bottom-0"></div>
+
         <div
-          className="max-w-6xl mx-auto rounded-3xl overflow-hidden sm:h-[1100px] md:h-[950px] lg:h-[420px] bg-white border border-gray-300 shadow-md"
+          className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-white border border-gray-300 shadow-md"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -61,57 +61,63 @@ const Testimonial = () => {
               <div
                 key={index}
                 className={`transition-opacity duration-1000 ease-in-out ${
-                  index === activeIndex ? "opacity-100" : "opacity-0 absolute"
+                  index === activeIndex
+                    ? "opacity-100 relative"
+                    : "opacity-0 absolute"
                 }`}
               >
-                <div className="md:flex items-center">
-                  <div className="w-full md:w-72 rounded-2xl overflow-hidden h-96">
-                    <div className="flex items-center justify-center h-full lg:ml-[30px]">
-                      <Image
-                        src={testimonial.image}
-                        width={500}
-                        height={600}
-                        className="w-full h-[300px] object-cover rounded-xl"
-                        alt={`${testimonial.name} Picture`}
-                      />
-                    </div>
+                <div className="flex flex-col md:flex-row items-center md:items-start p-6 sm:p-8 lg:p-12 gap-8">
+                  {/* Image Section */}
+                  <div className="w-full md:w-72 rounded-2xl overflow-hidden aspect-[3/4] max-h-[350px] flex-shrink-0">
+                    <Image
+                      src={testimonial.image}
+                      width={500}
+                      height={600}
+                      className="w-full h-full object-cover rounded-xl"
+                      alt={`${testimonial.name} Picture`}
+                    />
                   </div>
-                  <div className="md:ml-8 lg:ml-16 flex-1 flex items-start mt-[34px] md:mt-0 pb-20 md:pb-0">
-                    <div className="mr-5 flex-shrink-0 pt-[50px]">
-                      <Image
-                        src="/assets/images/quote-white.png"
-                        width={64}
-                        height={64}
-                        className="w-14 object-contain"
-                        alt="Quote"
-                      />
-                    </div>
-                    <div className="pt-[50px]">
-                      <p className="text-gray-900 text-xl lg:text-2xl font-normal text-justify hyphens-auto pr-6">
+
+                  {/* Text Section */}
+                  <div className="flex-1 flex flex-col justify-start">
+                    <div className="flex items-start mb-4">
+                      <div className="mr-4 flex-shrink-0">
+                        <Image
+                          src="/assets/images/quote-white.png"
+                          width={64}
+                          height={64}
+                          className="w-8 sm:w-10 md:w-12 object-contain"
+                          alt="Quote"
+                        />
+                      </div>
+                      <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl font-normal text-justify hyphens-auto">
                         {testimonial.quote}
                       </p>
-                      <div className="w-1/2 h-[1px] bg-gray-500 relative my-10">
-                        <div className="absolute z-10 bg-white h-full left-1/2 w-7"></div>
-                      </div>
-                      <h3 className="font-bold text-gray-900 text-3xl mb-2">
-                        {testimonial.name}
-                      </h3>
-                      <p className="text-gray-700 text-2xl font-normal">
-                        {testimonial.position}
-                      </p>
-                      <p className="text-sm font-bold text-primary pb-[50px]">
-                        {testimonial.company}
-                      </p>
                     </div>
+
+                    <div className="w-1/2 h-px bg-gray-500 relative my-6 sm:my-10">
+                      <div className="absolute z-10 bg-white h-full left-1/2 w-7"></div>
+                    </div>
+
+                    <h3 className="font-bold text-gray-900 text-lg sm:text-xl md:text-2xl mb-1">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-gray-700 text-base sm:text-lg font-normal">
+                      {testimonial.position}
+                    </p>
+                    <p className="text-sm font-bold text-primary mt-2 mb-6">
+                      {testimonial.company}
+                    </p>
                   </div>
                 </div>
               </div>
             ))}
 
-            <div className="absolute bottom-7 right-1/2 translate-x-1/2 md:translate-x-0 md:right-2 flex items-center space-x-4 pt-10 lg:pr-6">
+            {/* Navigation Buttons (Bottom Right) */}
+            <div className="absolute bottom-6 right-6 flex items-center space-x-4 z-10">
               <button
                 onClick={handlePrev}
-                className="w-12 h-12 flex items-center justify-center text-gray-500 rounded-2xl border border-gray-400 bg-white shadow-sm hover:bg-gray-100 transition"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-gray-500 rounded-xl border border-gray-400 bg-white shadow-sm hover:bg-gray-100 transition"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +125,7 @@ const Testimonial = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-5 h-5 sm:w-6 sm:h-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -130,7 +136,7 @@ const Testimonial = () => {
               </button>
               <button
                 onClick={handleNext}
-                className="bg-black text-white w-12 h-12 flex items-center justify-center rounded-2xl shadow-md hover:opacity-80 transition"
+                className="bg-black text-white w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl shadow-md hover:opacity-80 transition"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +144,7 @@ const Testimonial = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-5 h-5 sm:w-6 sm:h-6"
                 >
                   <path
                     strokeLinecap="round"

@@ -3,19 +3,20 @@ import Link from "next/link";
 
 export default function Banner() {
   return (
-    <section className="md:container px-4 lg:h-screen min-h-screen relative flex flex-col md:flex-row items-center pt-9 md:pt-0 z-10">
+    <section className="lg:container px-4 md:h-screen relative flex flex-col lg:flex-row items-center pt-16 md:pt-0 z-10">
       {/* Left Content */}
       <div className="md:w-1/2 text-center md:text-left z-20 px-2 lg:px-0">
-        <h1 className="text-5xl lg:text-6xl xl:text-7xl text-[#1D1E25] font-hubot leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-[#1D1E25] font-hubot leading-tight">
           Cybersecurity, at the speed of simplicity
         </h1>
-        <p className="mt-4 text-gray-600 text-base sm:text-lg lg:text-xl font-hubot">
+        <p className="mt-4 text-gray-600 text-sm sm:text-base lg:text-lg xl:text-xl font-hubot">
           Easily protect your organization from cyberattacks{" "}
           <br className="hidden md:block" />
           with just one simple click, ensuring enhanced{" "}
           <br className="hidden md:block" />
           security and peace of mind.
         </p>
+
         {/* Buttons */}
         <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-4 lg:mt-[50px]">
           <Link href="/trial">
@@ -34,21 +35,21 @@ export default function Banner() {
         </div>
       </div>
 
-      {/* Right Side - Background Gradient + Foreground Image */}
-      <div className="relative md:w-1/2 mt-10 md:mt-0 w-full flex justify-center">
+      {/* Right Side */}
+      <div className="relative md:w-1/2 mt-10 md:mt-0 w-full flex justify-center items-center overflow-visible">
         {/* Background Gradient */}
         <div className="absolute inset-0 flex justify-center items-center">
-          <div className="absolute w-[250px] h-[400px] sm:w-[350px] sm:h-[500px] md:w-[700px] md:h-[700px] rounded-full bg-gradient-to-r from-primary via-indigo-300 to-primary opacity-50 blur-[80px] sm:blur-[100px]"></div>
+          <div className="absolute w-[250px] h-[400px] sm:w-[350px] sm:h-[500px] md:w-[600px] md:h-[700px] lg:w-[800px] lg:h-[800px] rounded-full bg-gradient-to-r from-primary via-indigo-300 to-primary opacity-50 blur-[80px] sm:blur-[100px]"></div>
         </div>
 
         {/* Foreground Image */}
-        <div className="relative z-10">
+        <div className="relative z-10 w-full lg:w-[120%] xl:w-[140%]">
           <Image
             src="/assets/images/air-banner.png"
             alt="Cyber Security Dashboard"
-            width={800}
-            height={450}
-            className="relative z-10 scale-100 sm:scale-110 md:scale-125 lg:scale-[1.3] overflow-visible"
+            width={1200}
+            height={700}
+            className="w-full h-auto object-contain"
           />
         </div>
       </div>

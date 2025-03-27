@@ -24,7 +24,7 @@ const Footer = () => {
                 className="bg-white w-8 h-8 text-primary border border-primary rounded-full flex items-center justify-center p-1"
                 size={20}
               />
-              <span>WY, USA // Singapore</span>
+              <span>Singapore - HQ, USA, Bangladesh</span>
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-2">
               <MdOutlineEmail

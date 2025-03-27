@@ -29,7 +29,7 @@ const blogs = [
 
 const BlogSection = () => {
   return (
-    <section className="md:container py-10 px-5">
+    <section className="lg:container py-10 px-5">
       <h2 className="text-2xl pb-8 lg:text-3xl font-medium font-hubot text-gray-900">
         Read our blogs to learn about the latest trends in the world <br /> of
         cybersecurity

@@ -19,7 +19,7 @@ export default function LifeAtAxiler() {
               {/* Set height explicitly for mobile screens */}
               <div className="relative w-full h-64 lg:h-full">
                 <Image
-                  src="/assets/team/team-2.png"
+                  src="/assets/team/office_1.jpg"
                   className="rounded-xl object-cover object-center"
                   alt="Office 2"
                   layout="fill"
@@ -30,7 +30,7 @@ export default function LifeAtAxiler() {
               {/* Set height explicitly for mobile screens */}
               <div className="relative w-full h-64 lg:h-full">
                 <Image
-                  src="/assets/team/activity-2.jpg"
+                  src="/assets/team/team-2.png"
                   className="rounded-xl object-cover object-center"
                   alt="Office 1"
                   layout="fill"

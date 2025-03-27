@@ -81,7 +81,7 @@ const Header = () => {
         isSticky ? "bg-white shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="md:container flex justify-between items-center py-4">
+      <div className="lg:container flex justify-between items-center py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image

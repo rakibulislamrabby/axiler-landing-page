@@ -242,7 +242,7 @@ const Trial = () => {
                   enableSearch
                   inputStyle={{
                     width: "100%",
-                    padding: "10px",
+                     padding: "10px 10px 10px 48px",
                     borderColor: "#ccc",
                   }}
                 />
